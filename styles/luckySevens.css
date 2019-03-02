@@ -8,4 +8,8 @@ header {
 }
 table {
 	border-top: 1px solid #000;
+	margin-top: 5px;
+}
+caption {
+	font-size: 1.5em;
 }
