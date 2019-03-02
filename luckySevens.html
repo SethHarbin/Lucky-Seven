@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<!--
+    Name: Seth Harbin 
+    Date Created: 3/1/2019
+    Most recent revision: 3/1/2019
+-->
+<html lang="en"> 
+    <head> 
+        <title>Lucky Sevens</title>	
+		<script type="text/JavaScript" src="scripts/luckySevens.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+		<link href="styles/luckySevens.css" rel="stylesheet" type="text/css" />
+    </head> 
+    
+    <body>
+    <div class="container">
+        <h1>Lucky Sevens</h1>
+        
+		<form name="game" onsubmit="return validateBet();" class="form-inline">
+			<div class="form-group">
+				<label for="bet">Starting Bet: </label>
+				<input type="text" class="form-control" id="bet" pattern="^-?\$\d*\.\d{2}$"
+				placeholder="$0.00" title="Input should be in the form $X.YZ."><br>
+			</div>
+			<br>
+			<button type="submit" id="submitButton" class="btn btn-default">Play</button>
+		</form>
+		<table id="results" class="table table-striped" style="display:none;">
+			<thead>
+				<tr>
+					<th>Starting Bet</th>
+					<th><span id="initial"></span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Total Rolls Before Going Broke</td>
+					<td><span id="rollCount"></span></td>
+				</tr>
+				<tr>
+					<td>Highest Amount Won</td>
+					<td><span id="maxBet"></span></td>
+				</tr>
+				<tr>
+					<td>Roll Count at Highest Amount Won</td>
+					<td><span id="maxBetRolls"></span></td>
+				</tr>
+			</tbody>
+		</table
+        
+	</div>
+    </body> 
+</html>
