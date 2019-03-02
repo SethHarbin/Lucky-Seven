@@ -13,7 +13,7 @@ function validateBet() {
 	}
 	do{
 		count++;
-		if(((Math.floor(Math.random() * 6) + 1)+(Math.floor(Math.random() * 6) + 1))==7){
+		if((rollDice()+rollDice())==7){
 			numBet = numBet+4.00;
 			if(numBet > highBet){
 				highCount = count;
@@ -47,3 +47,7 @@ function clearErrors() {
         document.forms["game"].elements[i].parentElement.className = "form-group";
     }
 } 
+
+function rollDice(){
+	return (Math.floor(Math.random() * 6) + 1);
+}
